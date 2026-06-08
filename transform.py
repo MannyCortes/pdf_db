@@ -102,10 +102,12 @@ def decode_csv(file_path):
         #use chardet library to detect encoding of file 
         #read the file then detect the encoding
         usecols = ["Transaction_ID", "Date", "Customer_Name", "Item_Purchased", "Quantity", "Unit_Price", "Total_Amount", "Status"]
-        chardet_result = chardet.detect(f.read())
+        chardet_result = chardet.detect(f.read(chunk_size))
         encoding = chardet_result["encoding"]
         try:
+            #use pd to read the csv file and load it into memory
             csv_data = pd.read_csv(file_path, encoding=encoding, usecols=usecols)
+            #replace any null values with None and then convert the dataframe to a list of dicts
             csv_data = csv_data.where(pd.notnull(csv_data), None)
             csv_dict = csv_data.to_dict(orient="records")
             return csv_dict
