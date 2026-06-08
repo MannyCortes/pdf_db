@@ -3,7 +3,8 @@ import logging
 import pandas as pd
 import pandas.errors as pd_err 
 import puremagic 
-from datatime import datetime
+import chardet
+from datetime import datetime
 #configure the logger and file directory and what information to Log
 logging.basicConfig(filename="pipeline.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -40,11 +41,14 @@ def process_csv(file_path):
         logger.info("CSV data processed successfully for file: %s", file_path)
         #turns csv_dict into a list of dicts 
         clean_list = csv_df_check(csv_dict)
+        return clean_list
         #read_csv automatically manages iterating row ids, we can ovverried thisusing index_col="id"
         # if no header in csv file use names parameter'
     except UnicodeDecodeError: 
         logger.error("File encoding is not supported for: %s", file_path)
-        decode_csv(file_path)
+        csv_dict = decode_csv(file_path)
+        if csv_dict: clean_list = csv_df_check(csv_dict)
+        return clean_list
     except pd_err.ParserError:  logger.error("Parsing error for file: %s, check the csv format and delimiters", file_path)
     except FileNotFoundError:   logger.error("File not found for file: %s", file_path)
     except ValueError:  logger.error("Invalid parameters for reading CSV file: %s", file_path)
@@ -93,12 +97,28 @@ def csv_df_check(df):
             logger.warning("Data quality issues found in file: %s, %d rows with errors. See bad_data_%s.csv for details.", file_path, len(error_list), datetime.now().strftime('%Y%m%d_%H%M%S'))
     return clean_list
 
-def decode_csv(file_path): 
-    pass
+def decode_csv(file_path):
+    with open(file_path, "rb") as f:
+        #use chardet library to detect encoding of file 
+        #read the file then detect the encoding
+        usecols = ["Transaction_ID", "Date", "Customer_Name", "Item_Purchased", "Quantity", "Unit_Price", "Total_Amount", "Status"]
+        chardet_result = chardet.detect(f.read())
+        encoding = chardet_result["encoding"]
+        try:
+            csv_data = pd.read_csv(file_path, encoding=encoding, usecols=usecols)
+            csv_data = csv_data.where(pd.notnull(csv_data), None)
+            csv_dict = csv_data.to_dict(orient="records")
+            return csv_dict
+        except UnicodeDecodeError:
+            logger.warning("Failed to decode file: %s with detected encoding: %s", file_path, encoding)
+        except Exception as e:
+            logger.error("Unexpected Error in decode_csv module %s", e)
+
 
 def main():
     # example  
     if file_type_check(file_path):
         clean_data = process_csv(file_path)
+        print(f"Clean data: {clean_data}")
         
 if __name__ == "__main__":    main()

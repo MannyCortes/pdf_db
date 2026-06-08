@@ -30,3 +30,33 @@
 2026-06-04 22:34:16,408 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
 2026-06-04 22:35:28,964 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
 2026-06-04 22:35:29,038 - INFO - CSV data processed successfully for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv
+2026-06-05 22:38:46,797 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
+2026-06-05 22:38:46,832 - INFO - CSV data processed successfully for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv
+2026-06-05 22:38:46,839 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260605_223846.csv for details.
+2026-06-05 22:38:46,843 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260605_223846.csv for details.
+2026-06-05 22:38:46,845 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 2 rows with errors. See bad_data_20260605_223846.csv for details.
+2026-06-05 22:38:51,119 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
+2026-06-05 22:38:51,134 - INFO - CSV data processed successfully for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv
+2026-06-05 22:38:51,139 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260605_223851.csv for details.
+2026-06-05 22:38:51,142 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260605_223851.csv for details.
+2026-06-05 22:38:51,148 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 2 rows with errors. See bad_data_20260605_223851.csv for details.
+2026-06-05 22:40:03,153 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
+2026-06-05 22:40:03,161 - INFO - CSV data processed successfully for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv
+2026-06-05 22:40:03,167 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260605_224003.csv for details.
+2026-06-05 22:40:03,170 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260605_224003.csv for details.
+2026-06-05 22:40:03,173 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 2 rows with errors. See bad_data_20260605_224003.csv for details.
+2026-06-07 20:38:14,395 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
+2026-06-07 20:38:14,433 - INFO - CSV data processed successfully for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv
+2026-06-07 20:38:14,439 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260607_203814.csv for details.
+2026-06-07 20:38:14,443 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260607_203814.csv for details.
+2026-06-07 20:38:14,448 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 2 rows with errors. See bad_data_20260607_203814.csv for details.
+2026-06-07 20:55:24,126 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
+2026-06-07 20:55:24,134 - INFO - CSV data processed successfully for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv
+2026-06-07 20:55:24,138 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260607_205524.csv for details.
+2026-06-07 20:55:24,142 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260607_205524.csv for details.
+2026-06-07 20:55:24,144 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 2 rows with errors. See bad_data_20260607_205524.csv for details.
+2026-06-07 20:55:38,881 - INFO - File type check successful for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, file type: .csv
+2026-06-07 20:55:38,888 - INFO - CSV data processed successfully for file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv
+2026-06-07 20:55:38,891 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260607_205538.csv for details.
+2026-06-07 20:55:38,894 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 1 rows with errors. See bad_data_20260607_205538.csv for details.
+2026-06-07 20:55:38,898 - WARNING - Data quality issues found in file: C:\Users\manny\OneDrive\Desktop\pdf_db\practice.csv, 2 rows with errors. See bad_data_20260607_205538.csv for details.
